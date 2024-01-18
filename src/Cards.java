@@ -8,6 +8,4 @@ public class Cards {
         this.value = value;
         this.name = name;
     }
-
-    // Getters and setters
 }

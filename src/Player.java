@@ -19,6 +19,4 @@ public class Player {
     public void setHand(List<Card> hand) {
         this.hand = hand;
     }
-
-    // Additional methods for player actions, e.g., bet, fold, etc.
 }

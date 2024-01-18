@@ -1,15 +1,11 @@
+import java.util.ArrayList;
+import java.util.List;
 public class Main {
+    public static void main(String[] args) {
+        // Skapa nytt spel
+        PokerGame pokerGame = new PokerGame();
 
-    // Attributes
-
-    private String color;
-    private int value;
-    private String name;
-
-    // Constructors
-
-    // Methods
-
-    // Getters and setters
-
+        // Start the game
+        pokerGame.startGame();
+    }
 }

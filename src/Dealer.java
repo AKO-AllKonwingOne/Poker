@@ -1,21 +1,33 @@
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class Dealer {
-    private List<Card> deck;
+    private static List<Cards> deck;
 
-    public Dealer(List<Card> deck) {
-        this.deck = deck;
+    public Dealer() {
+        initializeDeck();
     }
 
-    public List<Card> getDeck() {
-        return deck;
+    private void initializeDeck() {
+        deck = new ArrayList<>();
+        String[] suits = {"Hearts", "Diamonds", "Clubs", "Spades"};
+        for (String suit : suits) {
+            for (int rank = 2; rank <= 14; rank++) {
+                deck.add(new Cards(suit, rank));
+            }
+        }
     }
 
     public void shuffleDeck() {
+        Collections.shuffle(deck);
     }
 
-    public List<Card> dealCards(int numCards) {
-        // Implement card dealing logic
-        return null;
+    public static List<Cards> dealCards(int numCards) {
+        List<Cards> dealtCards = new ArrayList<>();
+        for (int i = 0; i < numCards; i++) {
+            dealtCards.add(deck.remove(0));
+        }
+        return dealtCards;
     }
 }

@@ -3,7 +3,7 @@ import java.util.Collections;
 import java.util.List;
 
 public class Dealer {
-    private static List<Cards> deck;
+    private List<Cards> deck;
 
     public Dealer() {
         initializeDeck();
@@ -23,7 +23,7 @@ public class Dealer {
         Collections.shuffle(deck);
     }
 
-    public static List<Cards> dealCards(int numCards) {
+    public List<Cards> dealCards(int numCards) {
         List<Cards> dealtCards = new ArrayList<>();
         for (int i = 0; i < numCards; i++) {
             dealtCards.add(deck.remove(0));

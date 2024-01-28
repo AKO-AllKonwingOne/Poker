@@ -12,6 +12,10 @@ public class Player {
         this.chips = 100; // Initial chip count
     }
 
+    public void displayChips() {
+        System.out.println("Current chips: " + chips);
+    }
+
     public String getName() {
         return name;
     }
@@ -42,5 +46,6 @@ public class Player {
     }
 
     public void addToHand(List<Cards> cards) {
+        hand.addAll(cards);
     }
 }

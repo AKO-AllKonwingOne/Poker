@@ -21,7 +21,6 @@ public class Cards {
         return name;
     }
 
-    @Override
     public String toString() {
         return name + " of " + suit;
     }

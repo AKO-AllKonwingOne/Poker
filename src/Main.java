@@ -1,7 +1,7 @@
-public class Main {
+public class Main extends Game {
 
     public static void main(String[] args) {
-        Game game = new Game();
-        game.startGame();
+        Main main = new Main();
+        main.startGame();
     }
 }
